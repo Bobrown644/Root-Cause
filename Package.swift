@@ -15,6 +15,11 @@ let package = Package(
             name: "RootCauseCore",
             path: "Sources/RootCauseCore"
         ),
+        .executableTarget(
+            name: "RootCauseDemo",
+            dependencies: ["RootCauseCore"],
+            path: "Sources/RootCauseDemo"
+        ),
         .testTarget(
             name: "RootCauseCoreTests",
             dependencies: ["RootCauseCore"],
