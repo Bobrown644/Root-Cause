@@ -1,0 +1,19 @@
+JOB INPUTS:
+work_type: {{work_type}}
+voltage_level: {{voltage_level}}
+environment: {{environment_csv}}
+crew_size: {{crew_size}}
+equipment: {{equipment_csv}}
+time_pressure: {{time_pressure}}
+fatigue_risk: {{fatigue_risk}}
+new_crew_member: {{new_crew_member}}
+
+TASK:
+Generate a pre-task risk intelligence output tailored to the inputs above for electrical utility work.
+Return JSON only using the exact schema provided in the system prompt.
+Do not add extra keys beyond the schema.
+Do not wrap output in markdown code fences or any other formatting.
+Do not include commentary, explanations, or text outside the JSON object.
+Keep all controls verifiable and field-observable.
+Do not assume hazards not supported by the selected environment or equipment.
+Tailor fatal3, top_hazards, and primary_energy_sources to the specific work_type, voltage_level, and equipment listed above.
